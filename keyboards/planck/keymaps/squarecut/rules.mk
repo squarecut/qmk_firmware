@@ -1,2 +1,3 @@
 SRC += muse.c
 AUDIO_ENABLED = yes
+DYNAMIC_TAPPING_TERM_ENABLE = yes
