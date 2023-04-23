@@ -123,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_RAISE] = LAYOUT(
-  KC_DEL,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
+  KC_DEL,  KC_1,    KC_2,    KC_3,    KC_4,    KC_BSPC,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_BSPC,
   KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
   KC_TILD, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_BSLS,
   _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_NUHS, KC_NUBS, KC_PGUP, KC_PGDN, KC_ENT,
@@ -246,15 +246,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
+        case LT(RAISE, KC_SPC): case LOWER:
+            return TAPPING_TERM - 200;
         case SFT_T(KC_ENT):
-            return TAPPING_TERM - 200;
-        case RGUI_T(KC_SCLN):
-            return TAPPING_TERM - 200;
-        case LT(RAISE, KC_SPC):
-            return TAPPING_TERM - 200;
-        case LOWER:
-            return TAPPING_TERM - 200;            
+            return TAPPING_TERM - 150;    
+        case LGUI_T(KC_A): case LALT_T(KC_S): case LSFT_T(KC_D): case LCTL_T(KC_F): case RCTL_T(KC_J): case RSFT_T(KC_K): case LALT_T(KC_L): case RGUI_T(KC_SCLN):
+            return TAPPING_TERM - 100;     
         default:
             return TAPPING_TERM;
+            
     }
 }
