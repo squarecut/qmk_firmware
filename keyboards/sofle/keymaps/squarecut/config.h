@@ -9,3 +9,7 @@
 #define IGNORE_MOD_TAP_INTERRUPT //using with LT
 
 #define TAP_CODE_DELAY 10
+
+//to differentiate left and right PCBs with pro micro USB-C
+#define SPLIT_USB_DETECT
+#define SPLIT_USB_TIMEOUT 2500
