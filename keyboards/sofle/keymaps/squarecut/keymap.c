@@ -375,7 +375,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         //     return TAPPING_TERM - 200;
         case SFT_T(KC_ENT):
             return TAPPING_TERM + 50;    
-        case LGUI_T(KC_A): case LSFT_T(KC_D): case LCTL_T(KC_F): case RCTL_T(KC_J): case RSFT_T(KC_K): case RGUI_T(KC_SCLN): RSFT_T(KC_QUOT):
+        case LGUI_T(KC_A): case LSFT_T(KC_D): case LCTL_T(KC_F): case RCTL_T(KC_J): case RSFT_T(KC_K): case RGUI_T(KC_SCLN): case RSFT_T(KC_QUOT):
             return TAPPING_TERM + 200; //- 100;     
         case LALT_T(KC_S): case LALT_T(KC_L):
             return TAPPING_TERM + 200;
