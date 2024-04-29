@@ -48,6 +48,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     #define RGBLIGHT_VAL_STEP 17
 #endif
 
+#define TAPPING_TERM_PER_KEY
+#define TAP_CODE_DELAY 10
 
 //to differentiate left and right PCBs with pro micro USB-C
 #define SPLIT_USB_DETECT
