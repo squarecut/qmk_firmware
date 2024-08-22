@@ -48,16 +48,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_split_3x5_3(
 	QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, 		      KC_NO, KC_NO, KC_NO, KC_NO,  KC_NO, 
-	KC_LSFT, KC_LALT, KC_LCTL, KC_LGUI, KC_NO, 	  KC_NO, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R,  
+	KC_LSFT, KC_LALT, KC_LCTL, KC_LGUI, KC_NO, 	  KC_PLUS, KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R,  
 	KC_RALT, KC_NO, KC_NO, KC_NO, KC_NO,		      KC_NO, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, 
 	                      KC_NO, KC_NO, KC_NO, 			      KC_BTN1, KC_BTN3, KC_BTN2
   ),
  
     [3] = LAYOUT_split_3x5_3(
-	QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, 		    RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,
-	KC_LSFT, KC_LALT, KC_LCTL, KC_LGUI, KC_NO, 	KC_NO, KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT,
-	KC_RALT, KC_NO, KC_NO, KC_NO, KC_NO, 		    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, 
-	                KC_NO, KC_NO, KC_NO, 				    KC_MSTP, KC_MPLY, KC_MUTE
+	QK_BOOT, KC_NO, KC_NO, KC_NO, KC_NO, 		    KC_NO, KC_7, KC_8, KC_9, KC_NO,
+	KC_LSFT, KC_LALT, KC_LCTL, KC_LGUI, KC_NO, 	KC_EQL, KC_4, KC_5, KC_6, KC_NO,
+	KC_RALT, KC_NO, KC_NO, KC_NO, KC_NO, 		    KC_NO, KC_1, KC_2, KC_3, KC_NO, 
+	                KC_NO, KC_NO, KC_NO, 				    KC_MINS, KC_0, KC_DOT
   ),
     [4] = LAYOUT_split_3x5_3(
   	KC_LBRC, KC_7, KC_8, KC_9, KC_RBRC, 	      KC_NO, KC_NO, KC_NO, KC_NO, QK_BOOT, 
@@ -85,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case LGUI_T(KC_F): case LGUI_T(KC_J): case LSFT_T(KC_QUOT): case LSFT_T(KC_A):
-            return TAPPING_TERM + 80; //- 100;     
+            return TAPPING_TERM + 50; //- 100;     
         default:
             return TAPPING_TERM + 200;
             
